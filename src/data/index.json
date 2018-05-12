@@ -1,0 +1,895 @@
+{
+  "stats": {
+    "suites": 20,
+    "tests": 10,
+    "passes": 8,
+    "pending": 0,
+    "failures": 2,
+    "start": "2018-05-09T02:01:51.829Z",
+    "end": "2018-05-09T02:03:27.277Z",
+    "duration": 95448,
+    "testsRegistered": 10,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "d74778fc-51c2-45a5-a745-3f3312eec9a8",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [
+      
+    ],
+    "afterHooks": [
+      
+    ],
+    "tests": [
+      
+    ],
+    "suites": [
+      {
+        "uuid": "fca1573a-3658-4c29-b10e-9fc0d8998625",
+        "title": "Show and hide balance toggles between balance and account number",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [
+          
+        ],
+        "afterHooks": [
+          
+        ],
+        "tests": [
+          
+        ],
+        "suites": [
+          {
+            "uuid": "19b2c4a6-ce8d-4996-a87d-dac875c927de",
+            "title": "Given user is logged in, the default balance will be shown",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [
+              
+            ],
+            "afterHooks": [
+              
+            ],
+            "tests": [
+              {
+                "title": "When user click on hide balance, then balance will be hidden",
+                "fullTitle": "Show and hide balance toggles between balance and account number Given user is logged in, the default balance will be shown When user click on hide balance, then balance will be hidden",
+                "duration": 10619,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "_authenticate2.default.authenticate(\"2160989\", \"password02\").then(function (response) {\n  var currentBalance = response.accountBalance;\n  var withdrawalBalance = response.withdrawalBalance;\n  _home2.default.go();\n  _home2.default.login(\"2160989\", \"password02\");\n  _home2.default.displayAccountMenu();\n  _myAccount2.default.default(currentBalance, withdrawalBalance);\n  _myAccount2.default.hidden(currentBalance, withdrawalBalance, \"2160989\");\n  _home2.default.logout();\n});",
+                "err": {
+                  
+                },
+                "isRoot": false,
+                "uuid": "7d014ce6-cac3-4560-9283-84da045f46a5",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [
+              
+            ],
+            "passes": [
+              "7d014ce6-cac3-4560-9283-84da045f46a5"
+            ],
+            "failures": [
+              
+            ],
+            "pending": [
+              
+            ],
+            "skipped": [
+              
+            ],
+            "duration": 10619,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [
+          
+        ],
+        "failures": [
+          
+        ],
+        "pending": [
+          
+        ],
+        "skipped": [
+          
+        ],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "312393b3-3cb1-4a67-b3c9-f8d090a88183",
+        "title": "Verify that user can do a full cashout",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [
+          
+        ],
+        "afterHooks": [
+          
+        ],
+        "tests": [
+          
+        ],
+        "suites": [
+          {
+            "uuid": "6442c8b4-60dc-4c74-ac67-be4c61693954",
+            "title": "Given user has bets for cashout, when they do a full cashout",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [
+              
+            ],
+            "afterHooks": [
+              
+            ],
+            "tests": [
+              {
+                "title": "Then cashout is successful",
+                "fullTitle": "Verify that user can do a full cashout Given user has bets for cashout, when they do a full cashout Then cashout is successful",
+                "duration": 9350,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "_home2.default.go();\n_home2.default.login(\"2160989\", \"password02\");\n_home2.default.displayAccountMenu();\n_myAccount2.default.cashOut();\n_cashout2.default.fullCashOut(proposition.winOdds, \"$1.00\");\n_home2.default.displayAccountMenu();\n_home2.default.logout();",
+                "err": {
+                  "message": "CypressError: Timed out retrying: Expected to find element: '.cash-out-actions button', but never found it.",
+                  "estack": "CypressError: Timed out retrying: Expected to find element: '.cash-out-actions button', but never found it.\n    at Object.cypressErr (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:67227:11)\n    at Object.throwErr (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:67192:18)\n    at Object.throwErrByPath (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:67219:17)\n    at retry (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:61228:16)\n    at https://pre.tab.com.au/__cypress/runner/cypress_runner.js:53731:18\n    at tryCatcher (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:7091:23)\n    at Promise._settlePromiseFromHandler (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:5113:31)\n    at Promise._settlePromise (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:5170:18)\n    at Promise._settlePromise0 (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:5215:10)\n    at Promise._settlePromises (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:5290:18)\n    at Async._drainQueue (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:2023:16)\n    at Async._drainQueues (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:2033:10)\n    at Async.drainQueues (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:1907:14)\n    at <anonymous>"
+                },
+                "isRoot": false,
+                "uuid": "722a3eb5-4c51-46f2-a642-4793089b2970",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [
+              
+            ],
+            "passes": [
+              
+            ],
+            "failures": [
+              "722a3eb5-4c51-46f2-a642-4793089b2970"
+            ],
+            "pending": [
+              
+            ],
+            "skipped": [
+              
+            ],
+            "duration": 9350,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [
+          
+        ],
+        "failures": [
+          
+        ],
+        "pending": [
+          
+        ],
+        "skipped": [
+          
+        ],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "60eeaae9-9173-4e1f-a9cf-59b52e77da87",
+        "title": "Verify that user can do a partial cashout",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [
+          
+        ],
+        "afterHooks": [
+          
+        ],
+        "tests": [
+          
+        ],
+        "suites": [
+          {
+            "uuid": "93cb814f-c4cf-4ee8-bb98-a06963c8bd3d",
+            "title": "Given user has bets for cashout, when they do a partial cashout",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [
+              
+            ],
+            "afterHooks": [
+              
+            ],
+            "tests": [
+              {
+                "title": "Then cashout is successful",
+                "fullTitle": "Verify that user can do a partial cashout Given user has bets for cashout, when they do a partial cashout Then cashout is successful",
+                "duration": 8564,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "_home2.default.go();\n_home2.default.login(\"2160989\", \"password02\");\n_home2.default.displayAccountMenu();\n_myAccount2.default.cashOut();\n_cashout2.default.partialCashOut(proposition.winOdds, \"$1.00\");\n_home2.default.displayAccountMenu();\n_home2.default.logout();",
+                "err": {
+                  "message": "CypressError: Timed out retrying: Expected to find element: '.cash-out-actions button', but never found it.",
+                  "estack": "CypressError: Timed out retrying: Expected to find element: '.cash-out-actions button', but never found it.\n    at Object.cypressErr (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:67227:11)\n    at Object.throwErr (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:67192:18)\n    at Object.throwErrByPath (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:67219:17)\n    at retry (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:61228:16)\n    at https://pre.tab.com.au/__cypress/runner/cypress_runner.js:53731:18\n    at tryCatcher (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:7091:23)\n    at Promise._settlePromiseFromHandler (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:5113:31)\n    at Promise._settlePromise (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:5170:18)\n    at Promise._settlePromise0 (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:5215:10)\n    at Promise._settlePromises (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:5290:18)\n    at Async._drainQueue (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:2023:16)\n    at Async._drainQueues (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:2033:10)\n    at Async.drainQueues (https://pre.tab.com.au/__cypress/runner/cypress_runner.js:1907:14)\n    at <anonymous>"
+                },
+                "isRoot": false,
+                "uuid": "c463630e-3c9b-4bb3-89ce-e94bdf7500c2",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [
+              
+            ],
+            "passes": [
+              
+            ],
+            "failures": [
+              "c463630e-3c9b-4bb3-89ce-e94bdf7500c2"
+            ],
+            "pending": [
+              
+            ],
+            "skipped": [
+              
+            ],
+            "duration": 8564,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [
+          
+        ],
+        "failures": [
+          
+        ],
+        "pending": [
+          
+        ],
+        "skipped": [
+          
+        ],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "d98f8e24-7f40-4952-bdd6-e050b491e72d",
+        "title": "Scenario: Sign up journey without a credit card",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [
+          
+        ],
+        "afterHooks": [
+          
+        ],
+        "tests": [
+          
+        ],
+        "suites": [
+          {
+            "uuid": "82bfc3bf-8217-456c-93de-aa1c1b3833a1",
+            "title": "Given a new customer signing up without adding credit card",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [
+              
+            ],
+            "afterHooks": [
+              
+            ],
+            "tests": [
+              {
+                "title": "Then user successfully registered with Tab",
+                "fullTitle": "Scenario: Sign up journey without a credit card Given a new customer signing up without adding credit card Then user successfully registered with Tab",
+                "duration": 16116,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "_home2.default.go();\n_registration2.default.join();\n_registration2.default.skipDeposit();\n_registration2.default.successTab();\n_registration2.default.betNow();\n_home2.default.loggedIn();\n_home2.default.displayAccountMenu();\n_home2.default.logout();",
+                "err": {
+                  
+                },
+                "isRoot": false,
+                "uuid": "ff863005-2fec-4f33-909d-5fb0af81fdef",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [
+              
+            ],
+            "passes": [
+              "ff863005-2fec-4f33-909d-5fb0af81fdef"
+            ],
+            "failures": [
+              
+            ],
+            "pending": [
+              
+            ],
+            "skipped": [
+              
+            ],
+            "duration": 16116,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [
+          
+        ],
+        "failures": [
+          
+        ],
+        "pending": [
+          
+        ],
+        "skipped": [
+          
+        ],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "b8f796dc-ba7f-4acb-b981-52d7069a2053",
+        "title": "Scenario: User can logout of Tab",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [
+          
+        ],
+        "afterHooks": [
+          
+        ],
+        "tests": [
+          
+        ],
+        "suites": [
+          {
+            "uuid": "8e5482c7-f374-42a6-a5b7-69ec2d920171",
+            "title": "Given a login user who wish to logout",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [
+              
+            ],
+            "afterHooks": [
+              
+            ],
+            "tests": [
+              {
+                "title": "Then user successfully log out",
+                "fullTitle": "Scenario: User can logout of Tab Given a login user who wish to logout Then user successfully log out",
+                "duration": 5751,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "_home2.default.go();\n_home2.default.login(\"2160989\", \"password02\");\n_home2.default.displayAccountMenu();\n_home2.default.logout();",
+                "err": {
+                  
+                },
+                "isRoot": false,
+                "uuid": "71ce4b58-e2e4-4d2a-b4f2-eb9a20fb9e35",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [
+              
+            ],
+            "passes": [
+              "71ce4b58-e2e4-4d2a-b4f2-eb9a20fb9e35"
+            ],
+            "failures": [
+              
+            ],
+            "pending": [
+              
+            ],
+            "skipped": [
+              
+            ],
+            "duration": 5751,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [
+          
+        ],
+        "failures": [
+          
+        ],
+        "pending": [
+          
+        ],
+        "skipped": [
+          
+        ],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "535fec56-42af-4c0a-a188-fab5995d3659",
+        "title": "Verify low deposit pop up",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [
+          
+        ],
+        "afterHooks": [
+          
+        ],
+        "tests": [
+          
+        ],
+        "suites": [
+          {
+            "uuid": "14cf6692-2225-426b-a0c0-7bf4367810d8",
+            "title": "Given user with low deposit is logging in ",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [
+              
+            ],
+            "afterHooks": [
+              
+            ],
+            "tests": [
+              {
+                "title": "Then low deposit pop up is displayed",
+                "fullTitle": "Verify low deposit pop up Given user with low deposit is logging in  Then low deposit pop up is displayed",
+                "duration": 6105,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "_authenticate2.default.authenticate(\"2160988\", \"password02\").then(function (_ref) {\n  var accountBalance = _ref.accountBalance;\n  _home2.default.go();\n  _home2.default.login(\"2160988\", \"password02\");\n  _home2.default.checkLowDepositPopUp(\"2160988\", accountBalance);\n  _home2.default.closeModal();\n  _home2.default.displayAccountMenu();\n  _home2.default.logout();\n});",
+                "err": {
+                  
+                },
+                "isRoot": false,
+                "uuid": "352572df-3b59-43ca-a444-7d8d65fcef10",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [
+              
+            ],
+            "passes": [
+              "352572df-3b59-43ca-a444-7d8d65fcef10"
+            ],
+            "failures": [
+              
+            ],
+            "pending": [
+              
+            ],
+            "skipped": [
+              
+            ],
+            "duration": 6105,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [
+          
+        ],
+        "failures": [
+          
+        ],
+        "pending": [
+          
+        ],
+        "skipped": [
+          
+        ],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "3700042f-dc9e-428a-aeea-1038520c7f8f",
+        "title": "Verify that a user can deposit",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [
+          
+        ],
+        "afterHooks": [
+          
+        ],
+        "tests": [
+          
+        ],
+        "suites": [
+          {
+            "uuid": "9f9a46e4-255b-4302-97b4-a3796bc78687",
+            "title": "Given a user with a credit card, deposits $10",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [
+              
+            ],
+            "afterHooks": [
+              
+            ],
+            "tests": [
+              {
+                "title": "Then deposit is successful",
+                "fullTitle": "Verify that a user can deposit Given a user with a credit card, deposits $10 Then deposit is successful",
+                "duration": 8595,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "_authenticate2.default.authenticate(\"2160989\", \"password02\").then(function (_ref) {\n  var accountBalance = _ref.accountBalance;\n  _home2.default.go();\n  _home2.default.login(\"2160989\", \"password02\");\n  _home2.default.displayAccountMenu();\n  _myAccount2.default.quickDeposit();\n  _myAccount2.default.depositSuccess(accountBalance);\n  _home2.default.logout();\n});",
+                "err": {
+                  
+                },
+                "isRoot": false,
+                "uuid": "75a3a11e-1d8f-4980-9d4d-3f4b3993df3c",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [
+              
+            ],
+            "passes": [
+              "75a3a11e-1d8f-4980-9d4d-3f4b3993df3c"
+            ],
+            "failures": [
+              
+            ],
+            "pending": [
+              
+            ],
+            "skipped": [
+              
+            ],
+            "duration": 8595,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [
+          
+        ],
+        "failures": [
+          
+        ],
+        "pending": [
+          
+        ],
+        "skipped": [
+          
+        ],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "a1b2b4f8-3b1f-4c90-afa2-3ac4105d2d26",
+        "title": "Scenario: Verify Responsible Gambling page",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [
+          
+        ],
+        "afterHooks": [
+          
+        ],
+        "tests": [
+          
+        ],
+        "suites": [
+          {
+            "uuid": "743a7a0b-7500-470c-b3e6-28f383f80ac1",
+            "title": "Given a user is logged in",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [
+              
+            ],
+            "afterHooks": [
+              
+            ],
+            "tests": [
+              {
+                "title": "Then user can view responsible gambling page",
+                "fullTitle": "Scenario: Verify Responsible Gambling page Given a user is logged in Then user can view responsible gambling page",
+                "duration": 8562,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "_home2.default.go();\n_home2.default.login(\"2160989\", \"password02\");\n_responsibleGamblingPage2.default.viewResponsibleGambling();\n_responsibleGamblingPage2.default.checkMaximumBetCost();\n_responsibleGamblingPage2.default.checkWeeklyDepositLimit();\n_responsibleGamblingPage2.default.checkLinksOnMoreInformation();\n_home2.default.displayAccountMenu();\n_home2.default.logout();",
+                "err": {
+                  
+                },
+                "isRoot": false,
+                "uuid": "6566de07-4966-4f86-a519-f94a704d918d",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [
+              
+            ],
+            "passes": [
+              "6566de07-4966-4f86-a519-f94a704d918d"
+            ],
+            "failures": [
+              
+            ],
+            "pending": [
+              
+            ],
+            "skipped": [
+              
+            ],
+            "duration": 8562,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [
+          
+        ],
+        "failures": [
+          
+        ],
+        "pending": [
+          
+        ],
+        "skipped": [
+          
+        ],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "ecf2cdb0-771b-436a-8be3-6efba3caae23",
+        "title": "Verify Tab rewards in account menu",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [
+          
+        ],
+        "afterHooks": [
+          
+        ],
+        "tests": [
+          
+        ],
+        "suites": [
+          {
+            "uuid": "041ad650-4ddb-40fc-92ef-0910eb9f50e4",
+            "title": "Given user is logged in and account menu is opened",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [
+              
+            ],
+            "afterHooks": [
+              
+            ],
+            "tests": [
+              {
+                "title": "Then Tab rewards is displayed",
+                "fullTitle": "Verify Tab rewards in account menu Given user is logged in and account menu is opened Then Tab rewards is displayed",
+                "duration": 86,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "_myAccount2.default.checkRewards();",
+                "err": {
+                  
+                },
+                "isRoot": false,
+                "uuid": "798781fa-f940-4cc4-b77f-2c7f2d81991d",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [
+              
+            ],
+            "passes": [
+              "798781fa-f940-4cc4-b77f-2c7f2d81991d"
+            ],
+            "failures": [
+              
+            ],
+            "pending": [
+              
+            ],
+            "skipped": [
+              
+            ],
+            "duration": 86,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [
+          
+        ],
+        "failures": [
+          
+        ],
+        "pending": [
+          
+        ],
+        "skipped": [
+          
+        ],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "33d8b79e-cb3e-4fd1-9146-a3dae3605bbc",
+        "title": "Verify withdrawal",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [
+          
+        ],
+        "afterHooks": [
+          
+        ],
+        "tests": [
+          
+        ],
+        "suites": [
+          {
+            "uuid": "f15f8203-cdb3-4293-b021-abc511216299",
+            "title": "Given user with EFT details added is logging in ",
+            "fullFile": "",
+            "file": "",
+            "beforeHooks": [
+              
+            ],
+            "afterHooks": [
+              
+            ],
+            "tests": [
+              {
+                "title": "Then successful withdrawal confirmation is displayed",
+                "fullTitle": "Verify withdrawal Given user with EFT details added is logging in  Then successful withdrawal confirmation is displayed",
+                "duration": 7253,
+                "state": "passed",
+                "speed": "slow",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "_authenticate2.default.authenticate(\"2160989\", \"password02\").then(function (_ref) {\n  var accountBalance = _ref.accountBalance;\n  _home2.default.go();\n  _home2.default.login(\"2160989\", \"password02\");\n  _home2.default.displayAccountMenu();\n  _myAccount2.default.clickWithdraw();\n  _myAccount2.default.checkWithdrawInfo();\n  _myAccount2.default.withdrawOneDollar();\n  _myAccount2.default.withdrawSuccess(\"2160989\", accountBalance);\n  _home2.default.displayAccountMenu();\n  _home2.default.logout();\n});",
+                "err": {
+                  
+                },
+                "isRoot": false,
+                "uuid": "5565360d-3b39-4d34-bad4-c7f7588de3d6",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [
+              
+            ],
+            "passes": [
+              "5565360d-3b39-4d34-bad4-c7f7588de3d6"
+            ],
+            "failures": [
+              
+            ],
+            "pending": [
+              
+            ],
+            "skipped": [
+              
+            ],
+            "duration": 7253,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [
+          
+        ],
+        "failures": [
+          
+        ],
+        "pending": [
+          
+        ],
+        "skipped": [
+          
+        ],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [
+      
+    ],
+    "failures": [
+      
+    ],
+    "pending": [
+      
+    ],
+    "skipped": [
+      
+    ],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}

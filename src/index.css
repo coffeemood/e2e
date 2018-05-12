@@ -1,0 +1,146 @@
+*{
+ margin: 0;
+ padding: 0;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background: #2d2d2d;
+-webkit-font-smoothing: antialiased;
+     
+}
+
+#mainMenu {
+    background-color: #2C2E30;
+    position: relative;
+}
+
+div.item {
+    float: left;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white !important;
+    font-family: "Ubuntu", sans-serif !important;
+}
+
+#mainMenuOptionBar {
+    margin: 0 auto;
+    right: 10px;
+/*    display: table;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,-50%);
+    height: 100%
+}
+
+#mainMenu a {
+    color: #E7E1C2;
+    float: right;
+    height: 100%;
+}
+
+#header {
+    font-size: 32px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+}
+
+#checkStatusIcon {
+    z-index: 1;
+    position: absolute;
+    bottom: 2.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#checkStatusGrid {
+    margin-top: 50px;
+    margin-right: 250px;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+#checkStatusDetails {
+    position: absolute; 
+    color: white;
+    top: 0;
+    width: 250px;
+    height: 75%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    display: table;   
+    transition: all .2s ease-in-out;
+}
+
+#checkStatusDetails:hover {
+/*    background: white !important;*/
+/*    color: black;*/
+/*    height: 100%;*/
+    cursor:pointer;
+}
+
+
+#checkStatusHeader {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 25px 15px;
+    letter-spacing: 1.59;
+    font-family: "Ubuntu", sans-serif;
+}
+
+#checkStatusCard {
+    
+    
+    height: 250px;
+    width: 250px;
+    background: #4d4d4d;
+    
+    float: none;
+    margin: auto;
+    
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    overflow: hidden;
+    border-radius: 2px;
+    
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    
+    border-radius: 27px 27px 27px 27px;
+    -moz-border-radius: 27px 27px 27px 27px;
+    -webkit-border-radius: 27px 27px 27px 27px;
+    border: 0px solid #000000;
+    
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+    transition: all .1s ease-in-out; 
+    
+}
+
+#checkStatusCard:hover {
+/*    background-color: #F8F8F8;*/
+    cursor: pointer;
+/*    filter: brightness(1.25)*/
+/*    z-index: 100;*/
+/*    background-color: #706E6F;*/
+/*    background-color: #181818;*/
+}
